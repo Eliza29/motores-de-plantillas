@@ -1,0 +1,18 @@
+html
+    head 
+        title='Productos'
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css')
+    body
+        div.container.mt-3
+            h2='Ingrese Productos'
+            form(action="/productos", method="post")
+                div.form-group
+                    label(for='nombre') Nombre:
+                    input#nombre.form-control(type='text', name='nombre')
+                div.form-group
+                    label(for='precio') Precio:
+                    input#precio.form-control(type='text', name='precio')
+                div.form-group
+                    label(for='foto') Foto URL:
+                    input#foto.form-control(type='text', name='foto')
+                button.btn.btn-success.mt-3(type="submit", name="asdf") Enviar

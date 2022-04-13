@@ -1,0 +1,25 @@
+html
+    head 
+        title='Productos'
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css')
+    body
+        div.container.mt-3
+            h2='Vista de Productos'
+            if productos.length > 0
+                div.table-responsive
+                    table.table.table-dark
+                        tr.text-light
+                            th Nombre
+                            th Precio
+                            th Foto
+                        each producto in productos
+                            tr 
+                                td=producto.nombre
+                                td=producto.precio
+                                td
+                                    img(src=producto.foto, alt="foto", width="100px")
+            else
+                h3.alert.alert-danger no se encontraron productos
+            a(href="/").btn.btn-success Ir al Inicio
+                            
+                        

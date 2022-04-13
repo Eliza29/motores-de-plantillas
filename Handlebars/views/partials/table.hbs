@@ -1,0 +1,22 @@
+<h2 style="">Vista de Productos</h2>
+
+{{#if listExists }}
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <tr style="color: white;"> <th>Nombre</th> <th>Precio</th> <th>Foto</th> </tr>
+            {{#each suggestedChamps}}
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>{{precio}}</td>
+                    <td>
+                        <img src={{foto}} alt="img" style="width: 100px;">
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+
+{{else}}
+    <h3 class="alert alert-danger">no se encontraron datos</h1>
+{{/if}}
+<a href="/" class="btn btn-success">Ir al Inicio</a>
